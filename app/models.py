@@ -6,7 +6,10 @@ class User(db.Model):
     email = db.Column(db.String(120), index = True, unique = True)
 
     # we can use user.posts to get a list of posts from the user
-    # we can also use post.author to get the User instance that created a post
+    # we can also use post.author to get the User instance that created a pos
+    # we can use user.posts to get a llst of posts from the user
+    # ce can also use post.author to get the User instance that created the
+    # post
     posts = db.relationship('Post', backref='author', lazy='dynamic')
 
     def __repr__(self):
